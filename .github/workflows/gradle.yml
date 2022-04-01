@@ -13,6 +13,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    
+    install:
+  # запускаем SUT (& означает, что в фоновом режиме - не блокируем терминал для запуска тестов)
+  - java -jar ./artifacts/app-ibank-build-for-testers.jar &
 
     steps:
       - uses: actions/checkout@v2
